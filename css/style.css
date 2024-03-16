@@ -1,0 +1,268 @@
+/* Normalisation supplémentaire 
+=============================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Mise en page de base
+=============================================== */
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    position: fixed;
+}
+
+body {
+    font-family: "Cagliostro", sans-serif;
+}
+
+/* .menu {
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    row-gap: 2rem;
+    padding-top: 2rem;
+    font-size: 1.5rem;
+    background-color: white;
+    border-bottom: 1px black solid;
+
+    transform: translateX(-100%);
+    transition: transform 500ms;
+}
+
+.menu a {
+    display: flex;
+    justify-content: center;
+    color: black;
+    text-decoration: none;
+    border: 1px black solid;
+    width: 90%;
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity 1000ms;
+    transition-delay: 300ms;
+}
+
+.menu a:hover {
+    background-color: rgb(209, 208, 208);
+}
+
+.bouton-burger {
+    cursor: pointer;
+}
+
+#checkbox-burger:checked~.menu {
+    transform: translateX(0);
+}
+
+#checkbox-burger:checked~.menu a {
+    opacity: 1;
+}
+
+#checkbox-burger:checked+label>span:first-of-type {
+    display: none;
+}
+
+#checkbox-burger+label>span:last-of-type {
+    display: none;
+}
+
+#checkbox-burger:checked+label>span:last-of-type {
+    display: initial;
+}
+
+#checkbox-burger {
+    display: none;
+} */
+
+section {
+    width: 100dvw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#section1 {
+  position: relative;
+}
+
+.titre {
+  position: absolute;
+  bottom: 0.5rem;
+  font-family: "Cinzel Decorative", serif;
+}
+
+#section1 video {
+  width: 100dvw;
+}
+ 
+#section3 {
+ background-color: rgb(247, 247, 247);
+}
+
+/* ========== Section 2 - Caroussel ========== */
+.section{
+  position: relative;
+}
+
+.padding-tb{
+  padding: 100px 0;
+}
+[type="radio"]:checked,
+[type="radio"]:not(:checked){
+  position: absolute;
+  opacity: 0;
+}
+.checkbox:checked + label,
+.checkbox:not(:checked) + label{
+  position: relative;
+  cursor: pointer;
+  margin-right: 2.5dvw;
+  margin-left: 2.5dvw;
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.2s ease;
+  background-image: url("../medias/fishes.png");
+}
+.checkbox.scnd + label{
+  background-image: url("../medias/fishingBear.png");
+}
+.checkbox.thrd + label{
+  background-image: url("../medias/layingBear.png");
+}
+.checkbox.foth + label{
+  background-image: url("../medias/roches.png");
+}
+
+.checkbox:checked + label{
+  border: 2px solid #ab8ab7;
+  transform: scale(1.1);
+}
+
+.slider-height-padding {
+    padding-top: 27rem;
+  }
+
+ul li {
+  position: absolute;
+  height: 25rem;
+  top: 0;
+  width: 100%;
+  list-style: none;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../medias/fishes.png");
+  line-height: 2.7;
+  color: #383838;
+  font-family: "Cinzel Decorative", serif;
+  font-weight: bold;
+  writing-mode: vertical-rl;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0 8px 25px 0 rgba(81, 174, 62, 0.156);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+ul li span {
+  mix-blend-mode: difference;
+}
+ul li:nth-child(2) {
+  background-image: url("../medias/fishingBear.png");
+}
+ul li:nth-child(3) {
+  background-image: url("../medias/layingBear.png");
+}
+ul li:nth-child(4) {
+  background-image: url("../medias/roches.png");
+}
+
+
+.checkbox.frst:checked ~ ul li:nth-child(1) {
+  opacity: 1;
+}
+.checkbox.scnd:checked ~ ul li:nth-child(2) {
+  opacity: 1;
+}
+.checkbox.thrd:checked ~ ul li:nth-child(3) {
+  opacity: 1;
+}
+.checkbox.foth:checked ~ ul li:nth-child(4) {
+  opacity: 1;
+}
+
+@media screen and (min-width: 992px) {
+    .checkbox:checked + label,
+    .checkbox:not(:checked) + label{
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .slider-height-padding {
+      padding-top: 30rem;
+    }
+
+    ul li {
+      height: 28rem;
+    }
+
+    .titre {
+      top: 1rem;
+    }
+}
+
+/* ========== Section 3 ========== */
+spline-viewer{
+  width: 90dvw;
+  padding: 10dvh 0;
+}
+
+/* ========== Bouton Acceuil dans Requêtes Medias ========== */
+.retourHautBouton {
+    opacity: 1;
+}
+
+/* ========== Les Requêtes Medias ========== */
+@media screen and (min-width: 768px) {
+    .menu {
+        padding: 0;
+        position: static;
+        justify-content: flex-end;
+        height: 12dvh;
+        width: 100dvw;
+        font-size: 1.1rem;
+        flex-direction: row;
+        opacity: 1;
+        transform: none;
+    }
+
+    .menu a {
+        opacity: 1;
+        border: none;
+        width: 9rem;
+    }
+
+    .menu a:hover {
+        border-bottom:  2px solid black;
+    }
+
+    .bouton-burger {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+
+}

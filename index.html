@@ -1,11 +1,108 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet-FE</title>
+
+    <title>Projet-Fin-Etudes</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Typographie de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" hreaf="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cagliostro&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cagliostro&family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Icons de Google -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
+
 <body>
-    
+    <header>
+        <!-- Bouton du menu principale -->
+        <!-- <input type="checkbox" id="checkbox-burger">
+        <label for="checkbox-burger" class="bouton-burger">
+            <span class="material-icons">menu</span>
+            <span class="material-icons">chevron_left</span>
+        </label> -->
+
+        <!-- Menu Principale
+        <nav class="menu">
+            <a href="#section1">Accueil</a>
+            <a href="#section2">À Propos</a>
+            <a href="#section3">Résultats</a>
+        </nav> -->
+    </header>
+
+    <main>
+        <!-- Section 1 -->
+        <section id="section1">
+            <h1 class="titre">Rocky & Lily</h1>
+            <video autoplay muted loop id="video">
+                <source src="medias/Rocky&Lily.mp4" type="video/mp4">
+            </video>
+        </section>
+
+        <!-- Section 2 / Carrousel -->
+        <section id="section2">
+            <div class="section full-height over-hide px-4 px-sm-0">
+                <div class="container">
+                    <div class="row full-height justify-content-center">
+                        <div class="col-lg-10 col-xl-8 align-self-center padding-tb">
+                            <div class="section mx-auto text-center slider-height-padding">
+                                  <input class="checkbox frst" type="radio" id="slide-1" name="slider" checked/>
+                                  <label for="slide-1"></label>
+                                  <input class="checkbox scnd" type="radio" name="slider" id="slider-2"/>
+                                  <label for="slider-2"></label>
+                                  <input class="checkbox thrd" type="radio" name="slider" id="slider-3"/>
+                                  <label for="slider-3"></label>
+                                  <input class="checkbox foth" type="radio" name="slider" id="slider-4"/>
+                                  <label for="slider-4"></label>
+                                <ul>
+                                    <li>
+                                        <span>POISSONS</span>
+                                    </li>
+                                    <li>
+                                        <span>OURS À LA PÊCHE</span>
+                                    </li>
+                                    <li>
+                                        <span>RELAXATION</span>
+                                    </li>
+                                    <li>
+                                        <span>ROCHES</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3 / 3D Viewer -->
+        <section id="section3">
+            <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.66/build/spline-viewer.js"></script>
+            <spline-viewer url="https://prod.spline.design/bYb6eY2h6q-dNkq4/scene.splinecode"></spline-viewer>
+        </section>
+
+        
+
+    </main>
+
+    <footer>
+        Ling Yin Kong &copy; Hiver 2024
+    </footer>
+    <!-- <script type="module" src="js/main.js"></script> -->
+    <script src="js/index.js"></script>
+    <!-- <script type="module" src="./js/main.js"></script> -->
 </body>
+
 </html>
