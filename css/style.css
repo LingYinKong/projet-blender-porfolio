@@ -55,6 +55,7 @@ section {
 }
 
 .titre {
+  z-index: 1;
   position: absolute;
   bottom: 0.5rem;
   font-family: "Cinzel Decorative", serif;
